@@ -1440,7 +1440,7 @@ body {
 
 .faq-item {
     margin-bottom: 1rem;
-    background: var(--glass-bg2);
+    background: var(--primary);
     border: 1px solid var(--glass-border);
     border-radius: 10px;
     overflow: hidden;
@@ -1451,7 +1451,7 @@ body {
     padding: 1.5rem;
     background: none;
     border: none;
-    color: var(--text);
+    color: var(--glass-bg2);
     text-align: left;
     cursor: pointer;
     display: flex;
@@ -1463,7 +1463,7 @@ body {
 }
 
 .faq-question:hover {
-    background: rgba(108, 99, 255, 0.1);
+    background: var(--glass-bg);
 }
 
 .faq-question i {
@@ -1477,7 +1477,7 @@ body {
 .faq-answer {
     display: none;
     padding: 0 1.5rem 1.5rem;
-    color: var(--text-muted2);
+    color: var(--glass-bg2);
 }
 
 .faq-item.active .faq-answer {
