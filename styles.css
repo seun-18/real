@@ -15,7 +15,9 @@
     --bg-light: #1A1A2E;
     --text: #FFFFFF;
     --text-muted: #A0A0A0;
+     --text-muted2: #747171;
     --glass-bg: rgba(255, 255, 255, 0.3);
+    --glass-bg2: rgba(255, 255, 255, 0.6);
     --glass-border: rgba(255, 255, 255, 0.3);
     --shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
 }
@@ -1438,7 +1440,7 @@ body {
 
 .faq-item {
     margin-bottom: 1rem;
-    background: var(--glass-bg);
+    background: var(--glass-bg2);
     border: 1px solid var(--glass-border);
     border-radius: 10px;
     overflow: hidden;
@@ -1475,7 +1477,7 @@ body {
 .faq-answer {
     display: none;
     padding: 0 1.5rem 1.5rem;
-    color: var(--text-muted);
+    color: var(--text-muted2);
 }
 
 .faq-item.active .faq-answer {
@@ -1496,7 +1498,7 @@ body {
 
 .ai-assistant p {
     text-align: center;
-    color: var(--text-muted);
+    color: var(--text-muted2);
     margin-bottom: 2rem;
 }
 
