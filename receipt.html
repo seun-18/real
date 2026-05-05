@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Receipt - RealEstate Pro</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="receipt-body">
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <i class="fas fa-building"></i>
+                <span>RealEstate Pro</span>
+            </div>
+            <a href="index.html" class="nav-link" style="margin-left: auto;">← Back to Home</a>
+        </div>
+    </nav>
+
+    <!-- Receipt Section -->
+    <section class="receipt-section">
+        <div class="receipt-container">
+            <!-- Success Header -->
+            <div class="success-header">
+                <div class="success-icon">
+                    <i class="fas fa-check-circle"></i>
+                </div>
+                <h1>Payment Successful!</h1>
+                <p>Your transaction has been completed successfully</p>
+            </div>
+
+            <!-- Receipt Card -->
+            <div class="receipt-card glass">
+                <!-- Receipt Header -->
+                <div class="receipt-header">
+                    <div class="company-info">
+                        <i class="fas fa-building"></i>
+                        <h2>RealEstate Pro</h2>
+                    </div>
+                    <div class="receipt-number">
+                        <p><strong>Receipt #</strong></p>
+                        <p id="receipt-id">RCP-2026-001234</p>
+                    </div>
+                </div>
+
+                <hr class="divider">
+
+                <!-- Billing Information -->
+                <div class="receipt-section-content">
+                    <h3>Billing Information</h3>
+                    <div class="info-grid">
+                        <div class="info-item">
+                            <label>Name</label>
+                            <p id="receipt-name">John Doe</p>
+                        </div>
+                        <div class="info-item">
+                            <label>Email</label>
+                            <p id="receipt-email">john@example.com</p>
+                        </div>
+                        <div class="info-item">
+                            <label>Phone</label>
+                            <p id="receipt-phone">(555) 123-4567</p>
+                        </div>
+                        <div class="info-item">
+                            <label>Address</label>
+                            <p id="receipt-address">123 Main St, City, State 12345</p>
+                        </div>
+                    </div>
+                </div>
+
+                <hr class="divider">
+
+                <!-- Transaction Details -->
+                <div class="receipt-section-content">
+                    <h3>Transaction Details</h3>
+                    <div class="info-grid">
+                        <div class="info-item">
+                            <label>Transaction ID</label>
+                            <p id="receipt-transaction-id">TXN-2026-9876543210</p>
+                        </div>
+                        <div class="info-item">
+                            <label>Payment Method</label>
+                            <p id="receipt-payment-method">Credit Card</p>
+                        </div>
+                        <div class="info-item">
+                            <label>Card Last 4 Digits</label>
+                            <p id="receipt-card-last4">•••• •••• •••• 4242</p>
+                        </div>
+                        <div class="info-item">
+                            <label>Date & Time</label>
+                            <p id="receipt-date-time">April 18, 2026 - 2:30 PM</p>
+                        </div>
+                    </div>
+                </div>
+
+                <hr class="divider">
+
+                <!-- Items Purchased -->
+                <div class="receipt-section-content">
+                    <h3>Properties Purchased</h3>
+                    <div class="receipt-items" id="receipt-items">
+                        <!-- Items will be populated by JavaScript -->
+                    </div>
+                </div>
+
+                <hr class="divider">
+
+                <!-- Amount Breakdown -->
+                <div class="receipt-section-content">
+                    <div class="amount-breakdown">
+                        <div class="amount-row">
+                            <span>Subtotal</span>
+                            <span id="receipt-subtotal">$500,000.00</span>
+                        </div>
+                        <div class="amount-row">
+                            <span>Tax (5%)</span>
+                            <span id="receipt-tax">$25,000.00</span>
+                        </div>
+                        <div class="amount-row">
+                            <span>Discount</span>
+                            <span id="receipt-discount">-$0.00</span>
+                        </div>
+                        <div class="amount-row total">
+                            <span>Total Amount Paid</span>
+                            <span id="receipt-total">$525,000.00</span>
+                        </div>
+                    </div>
+                </div>
+
+                <hr class="divider">
+
+                <!-- Actions -->
+                <div class="receipt-actions">
+                    <button class="btn-primary" onclick="printReceipt()">
+                        <i class="fas fa-print"></i> Print Receipt
+                    </button>
+                    <button class="btn-secondary" onclick="downloadReceipt()">
+                        <i class="fas fa-download"></i> Download PDF
+                    </button>
+                </div>
+
+                <!-- Footer Message -->
+                <div class="receipt-footer">
+                    <p>Thank you for your business! A confirmation email has been sent to your registered email address.</p>
+                    <p>If you have any questions, please contact our support team.</p>
+                </div>
+            </div>
+
+            <!-- Return Button -->
+            <div class="return-button-container">
+                <button class="btn-return" onclick="window.location.href='index.html'">
+                    <i class="fas fa-home"></i> Return to Home
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About Us</h3>
+                <p>RealEstate Pro is your trusted partner in finding the perfect property.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#properties">Properties</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 RealEstate Pro. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="receipt.js"></script>
+</body>
+</html>

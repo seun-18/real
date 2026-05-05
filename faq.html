@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ - RealEstate Pro</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+   <nav class="navbar">
+    <div class="nav-container">
+        <div class="logo">
+            <i class="fas fa-building"></i>
+            <span>RealEstate Pro</span>
+        </div>
+        <ul class="nav-menu" id="navMenu">
+            <li><a href="index.html" class="nav-link">Home</a></li>
+            <li><a href="index.html#properties" class="nav-link">Properties</a></li>
+            <li><a href="faq.html" class="nav-link">FAQ</a></li>
+            <li><a href="contact.html" class="nav-link">Contact</a></li>
+            <li><a href="login.html" class="nav-link btn-login">Login</a></li>
+        </ul>
+        <div class="hamburger" id="menuToggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+</nav>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <h1>Frequently Asked Questions</h1>
+
+            <!-- FAQ Tabs -->
+            <div class="faq-tabs">
+                <button class="faq-tab active" onclick="switchFaqTab('general')">General</button>
+                <button class="faq-tab" onclick="switchFaqTab('buying')">Buying</button>
+                <button class="faq-tab" onclick="switchFaqTab('selling')">Selling</button>
+                <button class="faq-tab" onclick="switchFaqTab('renting')">Renting</button>
+            </div>
+
+            <!-- FAQ Items -->
+            <div class="faq-content">
+                <div id="general" class="faq-tab-content active">
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>What is RealEstate Pro?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>RealEstate Pro is a comprehensive online platform that connects buyers, sellers, and renters with property listings. We provide tools to search, compare, and manage properties all in one place.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>Is RealEstate Pro free to use?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Yes, browsing and searching properties is completely free. Premium features and listings may have additional costs.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>How do I create an account?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Click on the "Register" button, fill in your details, and verify your email. You'll be able to access all features immediately.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="buying" class="faq-tab-content">
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>How do I search for properties?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Use our search bar on the homepage and specify your criteria like location, price range, and property type. You can also filter results using our advanced filters.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>Can I save properties for later?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Yes! Click the heart icon on any property to save it to your favorites. You can view saved properties in your account dashboard.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>What payment methods do you accept?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>We accept all major credit cards, PayPal, bank transfers, and digital wallets. All transactions are secure and encrypted.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="selling" class="faq-tab-content">
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>How do I list my property?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Go to your dashboard, click "List Property," fill in the details, upload photos, and publish. Your property will be visible within hours.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>What information do I need to list a property?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>You'll need property details (size, bedrooms, bathrooms), location, price, description, and high-quality photos.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="renting" class="faq-tab-content">
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>How do I apply to rent a property?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Click "Apply to Rent" on any property listing, fill in your application form, and submit. Property owners will review your application.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>What documents do I need for renting?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Typically, you'll need government ID, proof of income, and references. Specific requirements may vary by landlord.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- AI Chatbot Section -->
+    <section class="ai-assistant">
+        <div class="container">
+            <h2>Need More Help?</h2>
+            <p>Chat with our AI Assistant for instant answers</p>
+            <div class="chatbot-container">
+                <div class="chat-messages" id="chat-messages">
+                    <div class="message bot-message">
+                        <p>Hello! I'm your RealEstate Pro AI Assistant. How can I help you today?</p>
+                    </div>
+                </div>
+                <div class="chat-input-group">
+                    <input type="text" id="chat-input" placeholder="Type your question...">
+                    <button onclick="sendMessage()" class="btn-send">
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About Us</h3>
+                <p>RealEstate Pro is your trusted partner in finding the perfect property.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#properties">Properties</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 RealEstate Pro. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // FAQ Accordion functionality
+        document.querySelectorAll('.faq-question').forEach(button => {
+            button.addEventListener('click', function() {
+                const faqItem = this.parentElement;
+                faqItem.classList.toggle('active');
+                const answer = this.nextElementSibling;
+                answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
+            });
+        });
+
+        function switchFaqTab(tabName) {
+            // Hide all tabs
+            document.querySelectorAll('.faq-tab-content').forEach(tab => {
+                tab.classList.remove('active');
+            });
+            document.querySelectorAll('.faq-tab').forEach(tab => {
+                tab.classList.remove('active');
+            });
+
+            // Show selected tab
+            document.getElementById(tabName).classList.add('active');
+            event.target.classList.add('active');
+        }
+
+        // AI Chatbot
+        const responses = {
+            'hello': 'Hi there! How can I assist you with your real estate needs?',
+            'properties': 'We have over 10,000 properties listed. You can search by location, price, and type on our homepage.',
+            'price': 'Property prices vary based on location and size. Use our search filters to find properties within your budget.',
+            'loan': 'We recommend contacting financial institutions for mortgage advice. Many accept pre-qualification through our platform.',
+            'location': 'We operate in major cities across the country. Use our location search to find properties near you.',
+            'contact': 'You can reach our support team at info@realestatepro.com or visit our contact page for more options.'
+        };
+
+        function sendMessage() {
+            const input = document.getElementById('chat-input');
+            const message = input.value.trim();
+
+            if (message === '') return;
+
+            // Add user message
+            const messagesDiv = document.getElementById('chat-messages');
+            const userMsg = document.createElement('div');
+            userMsg.className = 'message user-message';
+            userMsg.innerHTML = `<p>${message}</p>`;
+            messagesDiv.appendChild(userMsg);
+
+            // Get AI response
+            const lowerMessage = message.toLowerCase();
+            let response = 'I understand. Could you provide more details? Our support team can help you better.';
+
+            for (let key in responses) {
+                if (lowerMessage.includes(key)) {
+                    response = responses[key];
+                    break;
+                }
+            }
+
+            // Add bot response
+            setTimeout(() => {
+                const botMsg = document.createElement('div');
+                botMsg.className = 'message bot-message';
+                botMsg.innerHTML = `<p>${response}</p>`;
+                messagesDiv.appendChild(botMsg);
+                messagesDiv.scrollTop = messagesDiv.scrollHeight;
+            }, 500);
+
+            input.value = '';
+            messagesDiv.scrollTop = messagesDiv.scrollHeight;
+        }
+
+        // Allow Enter key to send message
+        document.getElementById('chat-input').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') sendMessage();
+        });
+    </script>
+</body>
+</html>
